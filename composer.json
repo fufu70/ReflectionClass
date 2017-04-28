@@ -1,5 +1,5 @@
 {
-    "name": "skeleton",
+    "name": "fufu70/reflection-class",
     "require": {
         "php": ">=5.1.0",
         "yiisoft/yii": "1.1.*",
