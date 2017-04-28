@@ -1,8 +1,14 @@
 {
     "name": "fufu70/reflection-class",
+    "type": "library",
+    "license": "MIT",
     "require": {
         "php": ">=5.1.0",
-        "yiisoft/yii": "1.1.*",
-        "hashids/hashids": "^1.0"
-    }
+        "yiisoft/yii": "1.1.*"
+    },
+    "autoload": {
+		"psr-4": {
+			"Common\\": "src/"
+		}
+	}
 }
