@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="CommonPHP" tests="3" assertions="6" failures="0" errors="0" time="0.001167">
-    <testsuite name="Common\Test\ReflectionTest" file="/Users/Fuzzy/milf/ReflectionClass/tests/Reflection.php" tests="3" assertions="6" failures="0" errors="0" time="0.001167">
-      <testcase name="test_callMethod" class="Common\Test\ReflectionTest" file="/Users/Fuzzy/milf/ReflectionClass/tests/Reflection.php" line="33" assertions="2" time="0.000402"/>
-      <testcase name="test_private_property" class="Common\Test\ReflectionTest" file="/Users/Fuzzy/milf/ReflectionClass/tests/Reflection.php" line="43" assertions="2" time="0.000447"/>
-      <testcase name="test_static_property" class="Common\Test\ReflectionTest" file="/Users/Fuzzy/milf/ReflectionClass/tests/Reflection.php" line="56" assertions="2" time="0.000318"/>
+  <testsuite name="CommonPHP" tests="3" assertions="6" failures="0" errors="0" time="0.001288">
+    <testsuite name="Common\Test\ReflectionTest" file="/Users/Fuzzy/milf/ReflectionClass/tests/Reflection.php" tests="3" assertions="6" failures="0" errors="0" time="0.001288">
+      <testcase name="test_callMethod" class="Common\Test\ReflectionTest" file="/Users/Fuzzy/milf/ReflectionClass/tests/Reflection.php" line="33" assertions="2" time="0.000487"/>
+      <testcase name="test_private_property" class="Common\Test\ReflectionTest" file="/Users/Fuzzy/milf/ReflectionClass/tests/Reflection.php" line="43" assertions="2" time="0.000460"/>
+      <testcase name="test_static_property" class="Common\Test\ReflectionTest" file="/Users/Fuzzy/milf/ReflectionClass/tests/Reflection.php" line="56" assertions="2" time="0.000341"/>
     </testsuite>
   </testsuite>
 </testsuites>

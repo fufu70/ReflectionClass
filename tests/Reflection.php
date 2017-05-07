@@ -59,7 +59,8 @@ class ReflectionTest extends \PHPUnit_Framework_TestCase
         $value = 'is_set';
 
         $this->assertNotEquals($value, Reflection::getProperty('static_property', null, $this));
-        Reflection::setProperty('static_property', null, $this, $value);
+        $null = null;
+        Reflection::setProperty('static_property', null, $null, $value);
         $this->assertEquals($value, Reflection::getProperty('static_property', null, $this));
     }
 
