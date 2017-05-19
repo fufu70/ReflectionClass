@@ -21,10 +21,12 @@ use Common\Reflection;
 
 class ReflectionTest extends \PHPUnit_Framework_TestCase
 {
-    const PRIVATE_DUMMY_RESULT = 'private_dummy_result';
-    const STATIC_DUMMY_RESULT = 'static_dummy_result';
+    const PRIVATE_DUMMY_RESULT   = 'private_dummy_result';
+    const PROTECTED_DUMMY_RESULT = 'protected_dummy_result';
+    const STATIC_DUMMY_RESULT    = 'static_dummy_result';
 
     private $private_property;
+    protected $protected_property;
     private static $static_property;
 
     /**
@@ -33,6 +35,7 @@ class ReflectionTest extends \PHPUnit_Framework_TestCase
     public function test_callMethod()
     {
         $this->assertEquals(self::PRIVATE_DUMMY_RESULT, Reflection::callMethod('private_dummy_function', null, [], $this));
+        $this->assertEquals(self::PROTECTED_DUMMY_RESULT, Reflection::callMethod('protected_dummy_function', null, [], $this));
         $this->assertEquals(self::STATIC_DUMMY_RESULT, Reflection::callMethod('static_dummy_function', null, []));
     }
 
@@ -48,6 +51,19 @@ class ReflectionTest extends \PHPUnit_Framework_TestCase
         $this->assertNotEquals($value, Reflection::getProperty('private_property', null, $this));
         Reflection::setProperty('private_property', null, $this, $value);
         $this->assertEquals($value, Reflection::getProperty('private_property', null, $this));
+    }
+
+    /**
+     * Tests to see that a protected property can be retrieved and set.
+     */
+    public function test_protected_property()
+    {
+        $this->protected_property = 'not_set';
+        $value = 'is_set';
+
+        $this->assertNotEquals($value, Reflection::getProperty('protected_property', null, $this));
+        Reflection::setProperty('protected_property', null, $this, $value);
+        $this->assertEquals($value, Reflection::getProperty('protected_property', null, $this));
     }
 
     /**
@@ -73,6 +89,10 @@ class ReflectionTest extends \PHPUnit_Framework_TestCase
     private function private_dummy_function()
     {
         return self::PRIVATE_DUMMY_RESULT;
+    }
+
+    protected function protected_dummy_function() {
+        return self::PROTECTED_DUMMY_RESULT;
     }
 
     private static function static_dummy_function()

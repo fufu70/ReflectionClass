@@ -136,6 +136,8 @@ class Reflection
 
         if ($method->isPrivate()) {
             $method->setAccessible(true);
+        } else if ($method->isProtected()) {
+            $method->setAccessible(true);
         }
 
         return $method;
@@ -160,6 +162,8 @@ class Reflection
         $property = $reflection->getProperty($property_name);
 
         if ($property->isPrivate()) {
+            $property->setAccessible(true);
+        } else if ($property->isProtected()) {
             $property->setAccessible(true);
         }
 
