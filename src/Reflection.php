@@ -54,7 +54,7 @@ class Reflection
     /**
      * Gets the property value.
      *
-     * Gets the property
+     * Gets the property of a class or object.
      *
      * @param string $property_name The property to access inside of a class.
      * @param string $class_name The name of the class to access, namespace
@@ -78,7 +78,9 @@ class Reflection
     }
 
     /**
-     * Sets the property value
+     * Sets the property value.
+     *
+     * Sets the property of a class or object.
      *
      * @param string $property_name The property to access inside of a class.
      * @param string $class_name The name of the class to access, namespace
